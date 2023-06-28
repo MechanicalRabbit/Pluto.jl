@@ -126,6 +126,10 @@ function __init__()
             write(fn, "");
         end
     end
-end
+    delete!(ExpressionExplorerExtras.can_macroexpand, Symbol("@cmd"))
+    delete!(ExpressionExplorerExtras.can_macroexpand, Symbol("Base.@cmd"))
+    delete!(ExpressionExplorerExtras.can_macroexpand_no_bind, Symbol("@cmd"))
+    delete!(ExpressionExplorerExtras.can_macroexpand_no_bind, Symbol("Base.@cmd"))
+ end
 
 end
